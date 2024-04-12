@@ -21,7 +21,7 @@ buf generate --template buf.gen.pulsar.yaml
 
 cd ..
 
-# cp -r github.com/leemingi/checkers/* ./
+cp -r github.com/leemingi/checkers/* ./
 rm -rf api && mkdir api
 mv leemingi/checkers/* ./api
 rm -rf github.com leemingi
