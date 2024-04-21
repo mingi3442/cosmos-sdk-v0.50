@@ -4,6 +4,8 @@
 // - protoc             (unknown)
 // source: leemingi/checkers/v1/tx.proto
 
+// 패키지 이름 정의
+
 package checkersv1
 
 import (
@@ -26,7 +28,7 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MsgClient interface {
-	// CreateGame create a game.
+	// 새 게임을 생성하는 RPC로 MsgCreateGame 메시지 타입의 요청을 받아 MsgCreateGameResponse 메시지 타입을 응답
 	CreateGame(ctx context.Context, in *MsgCreateGame, opts ...grpc.CallOption) (*MsgCreateGameResponse, error)
 }
 
@@ -51,7 +53,7 @@ func (c *msgClient) CreateGame(ctx context.Context, in *MsgCreateGame, opts ...g
 // All implementations must embed UnimplementedMsgServer
 // for forward compatibility
 type MsgServer interface {
-	// CreateGame create a game.
+	// 새 게임을 생성하는 RPC로 MsgCreateGame 메시지 타입의 요청을 받아 MsgCreateGameResponse 메시지 타입을 응답
 	CreateGame(context.Context, *MsgCreateGame) (*MsgCreateGameResponse, error)
 	mustEmbedUnimplementedMsgServer()
 }

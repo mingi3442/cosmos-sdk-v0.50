@@ -66,7 +66,7 @@ func (AppModule) RegisterInterfaces(registry codectypes.InterfaceRegistry) {
 // ConsensusVersion implements AppModule/ConsensusVersion.
 func (AppModule) ConsensusVersion() uint64 { return ConsensusVersion }
 
-// RegisterServices registers a gRPC query service to respond to the module-specific gRPC queries.
+// ApppModule 구조체의 RegisterService 메서드는 애플리케이션 모듈의 서비스를 설정
 func (am AppModule) RegisterServices(cfg module.Configurator) {
   // Register servers
   // checkers.RegisterMsgServer(cfg.MsgServer(), keeper.NewMsgServerImpl(am.keeper))

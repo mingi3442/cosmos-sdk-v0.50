@@ -1,33 +1,37 @@
+// proto3 구문 사용을 명시
 syntax = "proto3";
-package leemingi.checkers.v1;
 
+// 패키지 이름 설정
+package leemingi.checkers.v1;
+// Go 언어에서 사용될 때의 패키지 경로를 설정
 option go_package = "github.com/leemingi/checkers";
 
+// 외부 proto 파일 import
 import "leemingi/checkers/v1/types.proto";
 import "google/api/annotations.proto";
 import "cosmos/query/v1/query.proto";
 import "gogoproto/gogo.proto";
 
-// Query defines the module Query service.
+// 게임 상태를 조회하는 쿼리 기능을 제공하는 Query 서비스 정의 
 service Query {
-  // GetGame returns the game at the requested index.
+  // GetGame은 특정 인덱스에 위치한 게임을 반환하는 RPC 메소드
   rpc GetGame(QueryGetGameRequest) returns (QueryGetGameResponse) {
+    // 해당 메소드가 모듈의 안전한 쿼리에 포함되어야 함을 지정하는 옵션
     option (cosmos.query.v1.module_query_safe) = true;
+    // HTTP GET 요청으로 이 RPC를 호출할 수 있도록 설정
     option (google.api.http).get =
       "/leemingi/checkers/v1/game/{index}";
   }
 }
 
-// QueryGetGameRequest is the request type for the Query/GetGame RPC
-// method.
+// QueryGetGameRequest은 GetGame RPC 메소드의 요청 타입
 message QueryGetGameRequest {
-  // index defines the index of the game to retrieve.
+  // 게임을 조회할 인덱스 정의
   string index = 1;
 }
 
-// QueryGetGameResponse is the response type for the Query/GetGame RPC
-// method.
+// QueryGetGameResponse는 GetGame RPC 메소드의  응답 티입
 message QueryGetGameResponse {
-  // Game defines the game at the requested index.
-  StoredGame Game = 1;
+  // 요청된 인덱스에서의 게임 상태를 포함
+  StoredGame Game = 1; 
 }

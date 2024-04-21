@@ -1,14 +1,15 @@
 {
   "app_name": "minid",
-  "app_version": "main-5b3399d230d16618ab02ea16e4bd7ca8f2c7c6f2",
-  "genesis_time": "2024-04-18T12:19:58.602344Z",
+  "app_version": "main-c301adaae075568922e41b8eb205d717ca02104d",
+  "genesis_time": "2024-04-21T10:34:52.414888Z",
   "chain_id": "demo",
-  "initial_height": 16,
+  "initial_height": 29,
   "app_hash": null,
   "app_state": {
     "auth": {
       "params": { "max_memo_characters": "256", "tx_sig_limit": "7", "tx_size_cost_per_byte": "10", "sig_verify_cost_ed25519": "590", "sig_verify_cost_secp256k1": "1000" },
       "accounts": [
+        { "@type": "/cosmos.auth.v1beta1.BaseAccount", "address": "mini18z2nwju087qu6m6n54ydx0aj66djym7lcn2844", "pub_key": null, "account_number": "1", "sequence": "0" },
         {
           "@type": "/cosmos.auth.v1beta1.ModuleAccount",
           "base_account": { "address": "mini1fl48vsnmsdzcv85q5d2q4z5ajdha8yu3354q5h", "pub_key": null, "account_number": "4", "sequence": "0" },
@@ -21,7 +22,6 @@
           "name": "not_bonded_tokens_pool",
           "permissions": ["burner", "staking"]
         },
-        { "@type": "/cosmos.auth.v1beta1.BaseAccount", "address": "mini10zhqt9w70vwk5vddpalx67mthrjqpm9s4dmk43", "pub_key": null, "account_number": "1", "sequence": "0" },
         {
           "@type": "/cosmos.auth.v1beta1.ModuleAccount",
           "base_account": { "address": "mini1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8rscnyl", "pub_key": null, "account_number": "3", "sequence": "0" },
@@ -30,8 +30,8 @@
         },
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "mini1c089e4k3xxlzmylathyxmwgkjv9r6jyk4u33lv",
-          "pub_key": { "@type": "/cosmos.crypto.secp256k1.PubKey", "key": "A11YxDIHmmO/KtqPvWwSjnRq6q/ClJ7eq9YiNADc9F3O" },
+          "address": "mini1nt3legc8peppak98s53ux6yqakjnjz9x9a7xzu",
+          "pub_key": { "@type": "/cosmos.crypto.secp256k1.PubKey", "key": "AmC3IjuboXpmRFx+s682zaEdVBEBxb2xQonr4m2Mf/hh" },
           "account_number": "0",
           "sequence": "2"
         },
@@ -46,9 +46,9 @@
     "bank": {
       "params": { "send_enabled": [], "default_send_enabled": true },
       "balances": [
+        { "address": "mini18z2nwju087qu6m6n54ydx0aj66djym7lcn2844", "coins": [{ "denom": "mini", "amount": "1000" }] },
         { "address": "mini1fl48vsnmsdzcv85q5d2q4z5ajdha8yu3354q5h", "coins": [{ "denom": "mini", "amount": "1000000" }] },
-        { "address": "mini10zhqt9w70vwk5vddpalx67mthrjqpm9s4dmk43", "coins": [{ "denom": "mini", "amount": "1000" }] },
-        { "address": "mini1c089e4k3xxlzmylathyxmwgkjv9r6jyk4u33lv", "coins": [{ "denom": "mini", "amount": "9000000" }] }
+        { "address": "mini1nt3legc8peppak98s53ux6yqakjnjz9x9a7xzu", "coins": [{ "denom": "mini", "amount": "9000000" }] }
       ],
       "supply": [{ "denom": "mini", "amount": "10001000" }],
       "denom_metadata": [],
@@ -62,8 +62,8 @@
           "storedGame": {
             "board": "*b*b*b*b|b*b*b*b*|*b*b*b*b|********|********|r*r*r*r*|*r*r*r*r|r*r*r*r*",
             "turn": "b",
-            "black": "mini1c089e4k3xxlzmylathyxmwgkjv9r6jyk4u33lv",
-            "red": "mini10zhqt9w70vwk5vddpalx67mthrjqpm9s4dmk43"
+            "black": "mini1nt3legc8peppak98s53ux6yqakjnjz9x9a7xzu",
+            "red": "mini18z2nwju087qu6m6n54ydx0aj66djym7lcn2844"
           }
         }
       ]
@@ -77,17 +77,17 @@
       },
       "fee_pool": { "community_pool": [] },
       "delegator_withdraw_infos": [],
-      "previous_proposer": "minivalcons1m6xqdggl92cxpewjy40sk4q9xdzqhjm46nsmvx",
-      "outstanding_rewards": [{ "validator_address": "minivaloper1c089e4k3xxlzmylathyxmwgkjv9r6jyk00w9us", "outstanding_rewards": [] }],
-      "validator_accumulated_commissions": [{ "validator_address": "minivaloper1c089e4k3xxlzmylathyxmwgkjv9r6jyk00w9us", "accumulated": { "commission": [] } }],
+      "previous_proposer": "minivalcons1fhxumxk7zm3qz2ztdlrfu2ylh9fxtn7rn6a8rh",
+      "outstanding_rewards": [{ "validator_address": "minivaloper1nt3legc8peppak98s53ux6yqakjnjz9xlwpjpq", "outstanding_rewards": [] }],
+      "validator_accumulated_commissions": [{ "validator_address": "minivaloper1nt3legc8peppak98s53ux6yqakjnjz9xlwpjpq", "accumulated": { "commission": [] } }],
       "validator_historical_rewards": [
-        { "validator_address": "minivaloper1c089e4k3xxlzmylathyxmwgkjv9r6jyk00w9us", "period": "1", "rewards": { "cumulative_reward_ratio": [], "reference_count": 2 } }
+        { "validator_address": "minivaloper1nt3legc8peppak98s53ux6yqakjnjz9xlwpjpq", "period": "1", "rewards": { "cumulative_reward_ratio": [], "reference_count": 2 } }
       ],
-      "validator_current_rewards": [{ "validator_address": "minivaloper1c089e4k3xxlzmylathyxmwgkjv9r6jyk00w9us", "rewards": { "rewards": [], "period": "2" } }],
+      "validator_current_rewards": [{ "validator_address": "minivaloper1nt3legc8peppak98s53ux6yqakjnjz9xlwpjpq", "rewards": { "rewards": [], "period": "2" } }],
       "delegator_starting_infos": [
         {
-          "delegator_address": "mini1c089e4k3xxlzmylathyxmwgkjv9r6jyk4u33lv",
-          "validator_address": "minivaloper1c089e4k3xxlzmylathyxmwgkjv9r6jyk00w9us",
+          "delegator_address": "mini1nt3legc8peppak98s53ux6yqakjnjz9x9a7xzu",
+          "validator_address": "minivaloper1nt3legc8peppak98s53ux6yqakjnjz9xlwpjpq",
           "starting_info": { "previous_period": "1", "stake": "1000000.000000000000000000", "height": "0" }
         }
       ],
@@ -104,11 +104,11 @@
         "min_commission_rate": "0.000000000000000000"
       },
       "last_total_power": "1",
-      "last_validator_powers": [{ "address": "minivaloper1c089e4k3xxlzmylathyxmwgkjv9r6jyk00w9us", "power": "1" }],
+      "last_validator_powers": [{ "address": "minivaloper1nt3legc8peppak98s53ux6yqakjnjz9xlwpjpq", "power": "1" }],
       "validators": [
         {
-          "operator_address": "minivaloper1c089e4k3xxlzmylathyxmwgkjv9r6jyk00w9us",
-          "consensus_pubkey": { "@type": "/cosmos.crypto.ed25519.PubKey", "key": "N6oPH6wAnhZwShFIzH31ZFxgNw2aRiXI59If/poFia4=" },
+          "operator_address": "minivaloper1nt3legc8peppak98s53ux6yqakjnjz9xlwpjpq",
+          "consensus_pubkey": { "@type": "/cosmos.crypto.ed25519.PubKey", "key": "jO6hs5xg0/Ey+5nEm3udLrds72O6H1GF/KUbs+FGmyw=" },
           "jailed": false,
           "status": "BOND_STATUS_BONDED",
           "tokens": "1000000",
@@ -118,7 +118,7 @@
           "unbonding_time": "1970-01-01T00:00:00Z",
           "commission": {
             "commission_rates": { "rate": "0.100000000000000000", "max_rate": "0.200000000000000000", "max_change_rate": "0.010000000000000000" },
-            "update_time": "2024-04-18T12:19:58.602344Z"
+            "update_time": "2024-04-21T10:34:52.414888Z"
           },
           "min_self_delegation": "1",
           "unbonding_on_hold_ref_count": "0",
@@ -127,8 +127,8 @@
       ],
       "delegations": [
         {
-          "delegator_address": "mini1c089e4k3xxlzmylathyxmwgkjv9r6jyk4u33lv",
-          "validator_address": "minivaloper1c089e4k3xxlzmylathyxmwgkjv9r6jyk00w9us",
+          "delegator_address": "mini1nt3legc8peppak98s53ux6yqakjnjz9x9a7xzu",
+          "validator_address": "minivaloper1nt3legc8peppak98s53ux6yqakjnjz9xlwpjpq",
           "shares": "1000000.000000000000000000"
         }
       ],
@@ -140,8 +140,8 @@
   "consensus": {
     "validators": [
       {
-        "address": "DE8C06A11F2AB060E5D2255F0B540533440BCB75",
-        "pub_key": { "type": "tendermint/PubKeyEd25519", "value": "N6oPH6wAnhZwShFIzH31ZFxgNw2aRiXI59If/poFia4=" },
+        "address": "4DCDCD9ADE16E201284B6FC69E289FB95265CFC3",
+        "pub_key": { "type": "tendermint/PubKeyEd25519", "value": "jO6hs5xg0/Ey+5nEm3udLrds72O6H1GF/KUbs+FGmyw=" },
         "power": "1",
         "name": "test"
       }

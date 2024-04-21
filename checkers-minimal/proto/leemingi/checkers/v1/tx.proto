@@ -1,32 +1,41 @@
 syntax = "proto3";
+
+// 패키지 이름 정의
 package leemingi.checkers.v1;
 
+// Go 언어로 작성될 때 사용할 패키지의 경로 지정
 option go_package = "github.com/leemingi/checkers";
 
+// 외부 프로토콜 파일들 import 
 import "cosmos/msg/v1/msg.proto";
 import "gogoproto/gogo.proto";
 import "leemingi/checkers/v1/types.proto";
 import "cosmos_proto/cosmos.proto";
 
-// Msg defines the module Msg service.
+// 특정 기능을 수행하는 메소드인 Msg 서비스를 정의
 service Msg {
+  // Cosmos SDK에 관련된 서비스 옵션 설정 
   option (cosmos.msg.v1.service) = true;
 
-  // CreateGame create a game.
+  // 새 게임을 생성하는 RPC로 MsgCreateGame 메시지 타입의 요청을 받아 MsgCreateGameResponse 메시지 타입을 응답
   rpc CreateGame(MsgCreateGame)
     returns (MsgCreateGameResponse);
 }
 
-// MsgCreateGame defines the Msg/CreateGame request type.
+// MsgCreateGame은 게임 생성 요청에 사용되는 메시지 타입
 message MsgCreateGame {
+  // 메시지를 생성하는 사용자를 서명자로 지정하는 옵션
   option (cosmos.msg.v1.signer) = "creator";
 
-  // creator is the message sender.
+  // 게임을 생성하는 사용자의 식별자
   string creator = 1;
+  // 게임의 고유 인덱스
   string index = 2 ;
+  // Cosmos AddressString 포맷을 이용한 게임의 흑색 플레이어 주소 
   string black = 3 [(cosmos_proto.scalar) = "cosmos.AddressString"];
+  // Cosmos AddressString 포맷을 이용한 게임의 적색 플레이어 주소 
   string red = 4 [(cosmos_proto.scalar) = "cosmos.AddressString"];
 }
 
-// MsgCreateGameResponse defines the Msg/CreateGame response type.
+// MsgCreateGameResponse은 CreateGame RPC의 응답으로 사용되는 메시지 타입
 message MsgCreateGameResponse {}

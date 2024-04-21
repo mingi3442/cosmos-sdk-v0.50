@@ -989,6 +989,8 @@ func (x *fastReflection_MsgCreateGameResponse) ProtoMethods() *protoiface.Method
 // 	protoc        (unknown)
 // source: leemingi/checkers/v1/tx.proto
 
+// 패키지 이름 정의
+
 const (
 	// Verify that this generated code is sufficiently up-to-date.
 	_ = protoimpl.EnforceVersion(20 - protoimpl.MinVersion)
@@ -996,17 +998,20 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-// MsgCreateGame defines the Msg/CreateGame request type.
+// MsgCreateGame은 게임 생성 요청에 사용되는 메시지 타입
 type MsgCreateGame struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// creator is the message sender.
+	// 게임을 생성하는 사용자의 식별자
 	Creator string `protobuf:"bytes,1,opt,name=creator,proto3" json:"creator,omitempty"`
-	Index   string `protobuf:"bytes,2,opt,name=index,proto3" json:"index,omitempty"`
-	Black   string `protobuf:"bytes,3,opt,name=black,proto3" json:"black,omitempty"`
-	Red     string `protobuf:"bytes,4,opt,name=red,proto3" json:"red,omitempty"`
+	// 게임의 고유 인덱스
+	Index string `protobuf:"bytes,2,opt,name=index,proto3" json:"index,omitempty"`
+	// Cosmos AddressString 포맷을 이용한 게임의 흑색 플레이어 주소
+	Black string `protobuf:"bytes,3,opt,name=black,proto3" json:"black,omitempty"`
+	// Cosmos AddressString 포맷을 이용한 게임의 적색 플레이어 주소
+	Red string `protobuf:"bytes,4,opt,name=red,proto3" json:"red,omitempty"`
 }
 
 func (x *MsgCreateGame) Reset() {
@@ -1057,7 +1062,7 @@ func (x *MsgCreateGame) GetRed() string {
 	return ""
 }
 
-// MsgCreateGameResponse defines the Msg/CreateGame response type.
+// MsgCreateGameResponse은 CreateGame RPC의 응답으로 사용되는 메시지 타입
 type MsgCreateGameResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
